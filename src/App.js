@@ -1,15 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Navbar from './componentes/Navbar';
-import IAsunto from './componentes/IAsunto';
+import LoginForm from "./componentes/LoginForm";
+
+function LoginPage(){
+    return (
+        <div className="app-container">
+            <LoginForm/>
+        </div>
+    );
+}
 
 function App() {
-  return (
-    
-    <div>
-      <Navbar/>
-    </div>
-  );
+  // return (
+  //
+  //   <div>
+  //     <Navbar/>
+  //   </div>
+  // );
+
+    return LoginPage();
+
 }
 
 export default App;

@@ -95,9 +95,8 @@ function Navbar() {
         {/*<BgDiv onClick={handleClick} className={`initial ${clicked ? ' active' : ''}`}></BgDiv>*/}
         <BgDiv onClick={manejarClick1GD} className={`initial ${clicked ? ' active' : ''}`}>
         <div className={`forms ${!clicked1 ? 'active' : ''}`}>  
-            <div>
               <IAsunto/>
-            </div>
+            
         </div>
 
         <div className={`descripcion ${!clicked2 ? 'active' : ''}`}>
@@ -208,13 +207,9 @@ const NavContainer = styled.nav`
   .forms{
     
     width: 100%;
-    display: block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 20%;
-    left: 0;
-    right: 0;
+    margin-top: 10%;
+    justify-content: left;
+    
 		}    
   }
   .forms.active{
@@ -235,7 +230,7 @@ const NavContainer = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 20%;
+    top: 4%;
     left: 0;
     right: 0;
     text-align: center;
@@ -269,9 +264,9 @@ const BgDiv = styled.div`
   
   &.active{
     border-radius: 0 0 20% 0;
-    top: 0;
+    top: 7%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
   }
   `

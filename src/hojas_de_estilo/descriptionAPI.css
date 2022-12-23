@@ -1,7 +1,18 @@
 .texto_d{
     color: #EEEEEE;
+    margin-left: 3%;
+    margin-right: 30%;
+    margin-bottom: 1.5%;
 }
 
 .container-description{
     text-align: left;
+}
+
+img{
+    margin-left: 3%;
+    margin-right: 30%;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    
 }

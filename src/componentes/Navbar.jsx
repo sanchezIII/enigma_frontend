@@ -17,6 +17,10 @@ function Navbar() {
   const [clicked4, setClicked4] = useState(false)
 
   const [clicked5, setClicked5] = useState(false)
+
+  const testf = () =>{
+
+  }
   
   const manejarClick1 = () => {
     setClicked (true);
@@ -57,15 +61,39 @@ function Navbar() {
   return (
     <>
       <NavContainer>
-        <h2><span>Plataforma</span> Enigma</h2>
+        <div className='encabezado'>
+        <h2><span>Plataforma</span> Enigma</h2></div>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={manejarClick1} href="#h" className={`link ${clicked ? 'active' : ''}`}>Crear Asunto</a>
-          <a onClick={manejarClick2} href="#h" className={`link ${clicked ? 'active' : ''}`}>Descripcion de la API</a>
-          <a onClick={manejarClick3} href="#h" className={`link ${clicked ? 'active' : ''}`}>Como usar la Plataforma</a>
-          <a onClick={manejarClick4} href="#h" className={`link ${clicked ? 'active' : ''}`}>Contactenos</a>
-          <a onClick={manejarClick5} href="#h" className={`link ${clicked ? 'active' : ''}`}>Acceder</a>
+          <div className='link-container' onClick={manejarClick1}>
+            <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Crear Asunto</p></a>
+          </div>
+          
+          <div className='link-container' onClick={manejarClick2}>
+            <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Descripcion de la API</p></a>
+          </div>
+          
+          <div className='link-container' onClick={manejarClick3}>
+            <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Como usar la Plataforma</p></a>
+          </div>
+          
+          <div className='link-container' onClick={manejarClick4}>
+            <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Contactenos</p></a>
+          </div>
+          
+          <div className='link-container' onClick={manejarClick5}>
+            <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Acceder</p></a>
+          </div>
         </div>
         
+        
+        
+        
+        { /*<BurguerButton clicked={clicked} handleClick={handleClick} />*/ }
+
+        
+
+        {/*<BgDiv onClick={handleClick} className={`initial ${clicked ? ' active' : ''}`}></BgDiv>*/}
+        <BgDiv onClick={manejarClick1GD} className={`initial ${clicked ? ' active' : ''}`}>
         <div className={`forms ${!clicked1 ? 'active' : ''}`}>  
             <div>
               <IAsunto/>
@@ -75,14 +103,8 @@ function Navbar() {
         <div className={`descripcion ${!clicked2 ? 'active' : ''}`}>
            <DescripcionAPI/>
         </div>
-        
-        
-        { /*<BurguerButton clicked={clicked} handleClick={handleClick} />*/ }
 
-        
-
-        {/*<BgDiv onClick={handleClick} className={`initial ${clicked ? ' active' : ''}`}></BgDiv>*/}
-        <BgDiv onClick={manejarClick1GD} className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
+        </BgDiv>
 
 
       </NavContainer>
@@ -93,24 +115,24 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
-  h2{
-    color: white;
-    font-weight: 400;
-    margin-right: 27%;
-    span{
-      font-weight: bold;
+  .encabezado{ 
+    width: 20%;
+    height: 80px;
+    margin-left: 10px;
+    h2{
+      color: #EEEEEE;
+      font-weight: 400;
+      margint: 27%;
+      span{
+        font-weight: bold;
+      }
     }
   }
-  padding: .4rem;
-  background-color: #333;
+  background-color: #222831;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  a{
-    color: white;
-    text-decoration: none;
-    margin-right: 2rem;
-  }
+  
+  
   .links{
     position: absolute;
     top: -700px;
@@ -118,12 +140,29 @@ const NavContainer = styled.nav`
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    text-align: end;
+    
     
     .link{
-      color: white;
+      color: #EEEEEE;
       font-size: 1rem;
-      
+      margin-top: 100px;
+      align-items: center;
+      text-decoration: none;
+
+    }
+
+    .test{
+      margin: 30px;
+    }
+
+    .link-container:hover{
+      background-color: #393E46;
+    }
+
+    .link-container{
+      display: inline-block;
+      height: 80px;
+      align-items: center;
     }
 
     .link.active{
@@ -133,7 +172,6 @@ const NavContainer = styled.nav`
       display: block;
 
     }
-
 
     @media(min-width: 768px){
       position: initial;
@@ -160,7 +198,6 @@ const NavContainer = styled.nav`
     top: 30%;
     left: 0;
     right: 0;
-    text-align: center;
     a{
       font-size: 2rem;
       margin-top: 1rem;
@@ -178,7 +215,6 @@ const NavContainer = styled.nav`
     top: 20%;
     left: 0;
     right: 0;
-    text-align: center;
 		}    
   }
   .forms.active{
@@ -189,7 +225,6 @@ const NavContainer = styled.nav`
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 
   }
 
@@ -218,12 +253,10 @@ const NavContainer = styled.nav`
 
   }
 
-  
-
 `
 
 const BgDiv = styled.div`
-  background-color: #333;
+  background-color: #393E46;
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -231,11 +264,14 @@ const BgDiv = styled.div`
   height: 100%;
   z-index: -1;
   transition: all .6s ease ;
+  display: flex;
+  align-items: flex-start;
   
   &.active{
-    border-radius: 0 0 0 0;
+    border-radius: 0 0 20% 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }`
+  }
+  `

@@ -4,6 +4,7 @@ import BurguerButton from './BurguerButton'
 import DescripcionAPI from './DescripcionAPI'
 import IAsunto from './IAsunto.jsx'
 import UsarPlataforma from './UsarPlataforma'
+import '../hojas_de_estilo/fonts.css'
 
 function Navbar() {
 
@@ -152,6 +153,7 @@ const NavContainer = styled.nav`
       margin-top: 100px;
       align-items: center;
       text-decoration: none;
+      font-family: NotoSans;
 
     }
 

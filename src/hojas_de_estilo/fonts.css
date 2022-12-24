@@ -10,6 +10,12 @@
 
 }
 
+@font-face {
+    font-family: "NotoSans";
+    src: url("../fonts/Noto_Sans/NotoSans-SemiBold.ttf");
+
+}
+
 .texto_d{
     font-family: SourceSans;
     

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import BurguerButton from './BurguerButton'
 import DescripcionAPI from './DescripcionAPI'
 import IAsunto from './IAsunto.jsx'
+import UsarPlataforma from './UsarPlataforma'
 
 function Navbar() {
 
@@ -43,7 +44,7 @@ function Navbar() {
 
   const manejarClick3 = () => {
     setClicked (true);
-    setClicked1 (true);
+    setClicked3 (true);
   }
 
   const manejarClick4 = () => {
@@ -100,7 +101,11 @@ function Navbar() {
         </div>
 
         <div className={`descripcion ${!clicked2 ? 'active' : ''}`}>
-           <DescripcionAPI/>
+              <DescripcionAPI/>
+        </div>
+
+        <div className={`usar ${!clicked3 ? 'active' : ''}`}>
+              <UsarPlataforma/>
         </div>
 
         </BgDiv>
@@ -223,7 +228,7 @@ const NavContainer = styled.nav`
 
   }
 
-  .descripcion{
+  .descripcion,.usar{
     
     width: 100%;
     display: block;
@@ -236,7 +241,7 @@ const NavContainer = styled.nav`
     text-align: center;
 		}    
   }
-  .descripcion.active{
+  .descripcion.active,.usar.active{
     visibility: hidden;
     position: absolute;
     width: 0px;
@@ -247,6 +252,7 @@ const NavContainer = styled.nav`
     text-align: center;
 
   }
+
 
 `
 
@@ -267,6 +273,6 @@ const BgDiv = styled.div`
     top: 7%;
     left: 0;
     width: 100%;
-    height: 200%;
+    height: 300%;
   }
   `

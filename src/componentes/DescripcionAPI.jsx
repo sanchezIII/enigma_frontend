@@ -3,6 +3,9 @@ import '../hojas_de_estilo/fonts.css'
 import '../hojas_de_estilo/descriptionAPI.css'
 import ga from '../imagenes/ga.jpg'
 import gsen from '../imagenes/ga.jpg'
+import gs from '../imagenes/gs.jpg'
+import go from '../imagenes/go.jpg'
+import so from '../imagenes/so.jpg'
 
 function DescripcionAPI() {
 
@@ -46,9 +49,14 @@ function DescripcionAPI() {
             <li>/api/addstream Agrega un stream al sistema. El stream debe seguir un
             formato como el que se aprecia en la figura 17. Si la solicitud es exitosa, el método devuelve como respuesta el objeto recibido.</li>
            
-           
+            <img src = {gs} alt = "gato" class = "bordes-redondeados"></img>
+
             <li>/api/addobservation Agrega una observación al sistema. La observación debe seguir un formato como el que se aprecia en la figura 18. 
               Si la solicitud es exitosa, el método devuelve como respuesta el objeto recibido.</li>
+
+            <img src = {go} alt = "gato" class = "bordes-redondeados"></img>
+
+
         </ul>
 
         <p className='texto_d'>A continuación se describen algunos de los métodos GET:</p>
@@ -56,7 +64,10 @@ function DescripcionAPI() {
         <ul className='texto_d'>
           <li>/api/topicSensors/topicId Devuelve todos los sensores que pertenecen a un asunto cuyo identificador es topicId. 
           Un ejemplo de la solucitud se muestra en la figura 19.</li>
+          <img src = {so} alt = "gato" class = "bordes-redondeados"></img>
         </ul>
+
+        
 
         <p className='texto_d'>A medida que se implementen los demás componentes de la plataforma,
         deben agregarse más endpoints a la API. Por ejemplo, para pedir desplegar servicios de analı́ticas y 

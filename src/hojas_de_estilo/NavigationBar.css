@@ -1,0 +1,162 @@
+
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+
+}
+
+h2{
+  color: #EEEEEE;
+  font-weight: 400;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.encabezado{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-bar-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+
+  background-color: #222831;
+
+  font-family: SourceSansPro, sans-serif;
+}
+
+.links-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.link-container{
+  /*color: #EEEEEE;*/
+  /*font-size: 1rem;*/
+  /*align-items: center;*/
+  text-decoration: none;
+
+  padding: 10px;
+}
+
+.link-container:hover{
+  background-color: #393E46;
+}
+
+.active{
+  background-color: #393E46;
+}
+
+a {
+  text-decoration: none; /* no underline */
+  color: #EEEEEE;
+}
+
+
+/*span{*/
+/*  font-weight: bold;*/
+/*}*/
+
+
+
+
+
+
+/*.test{*/
+/*  margin: 30px;*/
+/*}*/
+
+
+
+/*.link-container{*/
+/*  display: inline-block;*/
+/*  height: 80px;*/
+/*  align-items: center;*/
+/*}*/
+
+
+/*!*@media(min-width: 768px){*!*/
+/*!*  position: initial;*!*/
+/*!*  margin: 0;*!*/
+/*!*  a{*!*/
+/*!*    font-size: 1rem;*!*/
+/*!*    color: white;*!*/
+/*!*    display: inline;*!*/
+/*!*  }*!*/
+/*!*  display: block;*!*/
+/*!*}*!*/
+
+
+/*.links.active{*/
+
+/*  visibility: hidden;*/
+/*  width: 100%;*/
+/*  width: 0px;*/
+/*  height: 0px;*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  top: 30%;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*}*/
+
+/*a{*/
+/*  font-size: 2rem;*/
+/*  margin-top: 1rem;*/
+/*  color: white;*/
+/*}*/
+
+
+/*.forms{*/
+
+/*  width: 100%;*/
+/*  margin-top: 10%;*/
+/*  justify-content: left;*/
+
+/*}*/
+
+/*.forms.active{*/
+/*  visibility: hidden;*/
+/*  position: absolute;*/
+/*  width: 0px;*/
+/*  height: 0px;*/
+/*  right: 0;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+
+/*}*/
+
+/*.descripcion{*/
+
+/*  width: 100%;*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  top: 4%;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.descripcion.active{*/
+/*  visibility: hidden;*/
+/*  position: absolute;*/
+/*  width: 0px;*/
+/*  height: 0px;*/
+/*  right: 0;*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  text-align: center;*/
+
+/*}*/

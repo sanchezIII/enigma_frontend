@@ -9,7 +9,7 @@ import '../hojas_de_estilo/fonts.css'
 function Navbar() {
 
   const [clicked, setClicked] = useState(false)
-  
+
   const [clicked1, setClicked1] = useState(false)
 
   const [clicked2, setClicked2] = useState(false)
@@ -23,7 +23,7 @@ function Navbar() {
   const testf = () =>{
 
   }
-  
+
   const manejarClick1 = () => {
     setClicked (true);
     setClicked1 (true);
@@ -58,7 +58,7 @@ function Navbar() {
     setClicked1 (true);
   }
 
-  
+
 
   return (
     <>
@@ -69,36 +69,36 @@ function Navbar() {
           <div className='link-container' onClick={manejarClick1}>
             <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Crear Asunto</p></a>
           </div>
-          
+
           <div className='link-container' onClick={manejarClick2}>
             <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Descripcion de la API</p></a>
           </div>
-          
+
           <div className='link-container' onClick={manejarClick3}>
             <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Como usar la Plataforma</p></a>
           </div>
-          
+
           <div className='link-container' onClick={manejarClick4}>
             <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Contactenos</p></a>
           </div>
-          
+
           <div className='link-container' onClick={manejarClick5}>
             <a  href="#h" className={`link ${clicked ? 'active' : ''}`}><p className='test'>Acceder</p></a>
           </div>
         </div>
-        
-        
-        
-        
+
+
+
+
         { /*<BurguerButton clicked={clicked} handleClick={handleClick} />*/ }
 
-        
+
 
         {/*<BgDiv onClick={handleClick} className={`initial ${clicked ? ' active' : ''}`}></BgDiv>*/}
         <BgDiv onClick={manejarClick1GD} className={`initial ${clicked ? ' active' : ''}`}>
-        <div className={`forms ${!clicked1 ? 'active' : ''}`}>  
+        <div className={`forms ${!clicked1 ? 'active' : ''}`}>
               <IAsunto/>
-            
+
         </div>
 
         <div className={`descripcion ${!clicked2 ? 'active' : ''}`}>
@@ -127,7 +127,7 @@ const NavContainer = styled.nav`
     h2{
       color: #EEEEEE;
       font-weight: 400;
-      margint: 27%;
+      margin: 27%;
       span{
         font-weight: bold;
       }

@@ -162,7 +162,10 @@ const NavContainer = styled.nav`
     }
 
     .link-container:hover{
-      background-color: #393E46;
+      .link{
+        color: #00ADB5;
+      }
+      cursor: pointer;
     }
 
     .link-container{

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../hojas_de_estilo/fonts.css'
-import '../hojas_de_estilo/descriptionAPI.css'
+import '../hojas_de_estilo/UsarPlataforma.css'
 
 function UsarPlataforma() {
 

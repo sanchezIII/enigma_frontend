@@ -11,7 +11,7 @@ function NavigationBar({page, setPage}) {
     }
 
     function manejarMostrarUso() {
-
+        setPage('uso');
     }
 
     function manejarMostrarLogin() {

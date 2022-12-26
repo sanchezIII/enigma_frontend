@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BurguerButton from './BurguerButton'
 import DescripcionAPI from './DescripcionAPI'
 import IAsunto from './IAsunto.jsx'
-import UsarPlataforma from './UsarPlataforma'
+import UsarPlataforma from '../components/UsarPlataforma'
 import '../hojas_de_estilo/fonts.css'
 
 function Navbar() {

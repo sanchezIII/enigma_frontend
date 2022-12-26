@@ -4,6 +4,7 @@ import NavigationBar from './components/NavigationBar';
 import './hojas_de_estilo/NavigationBar.css'
 
 import {useState} from "react";
+import UsarPlataforma from "./components/UsarPlataforma";
 
 
 function LoginPage(setPage) {
@@ -29,6 +30,19 @@ function MainPage(setPage){
     );
 }
 
+function UsarPlataformaPage(setPage){
+    return (
+        <div className="app-container">
+            <NavigationBar
+                page={"uso"}
+                setPage={setPage}
+            />
+
+            <UsarPlataforma/>
+        </div>
+    );
+}
+
 function App() {
 
     let [page, setPage] = useState("main");
@@ -39,6 +53,9 @@ function App() {
 
         case "login":
             return LoginPage(setPage);
+
+        case "uso":
+            return UsarPlataformaPage(setPage)
 
         default:
             return <>

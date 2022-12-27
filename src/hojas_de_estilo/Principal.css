@@ -1,0 +1,28 @@
+.container-principal{
+    background-color: #393E46;
+    border-radius: 3px;
+    color: #EEEEEE;
+    
+    font-size: 1rem;
+    padding: 20px;
+    margin-top: 13%;
+    width: 70%;
+
+}
+
+.container-IoT{
+
+    display: flex;
+    align-items:flex-end;
+    
+}
+
+.foto-IoT{
+    width: 50%;
+    height: 50%;
+}
+
+.foto-IoTusuario{
+    width: 70%;
+    height: 70%;
+}

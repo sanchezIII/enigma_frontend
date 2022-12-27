@@ -4,6 +4,7 @@ import NavigationBar from './components/NavigationBar';
 import './hojas_de_estilo/NavigationBar.css'
 import IAsunto from './components/IAsunto';
 import DescripcionAPI from './components/DescripcionAPI';
+import Principal from './components/Principal';
 
 import {useState} from "react";
 
@@ -29,6 +30,7 @@ function MainPage(setPage){
                 page={"main"}
                 setPage={setPage}
             />
+           <Principal/>
         </div>
     );
 }

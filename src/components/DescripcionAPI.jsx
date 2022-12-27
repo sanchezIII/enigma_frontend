@@ -32,26 +32,26 @@ function DescripcionAPI() {
             A continuación se describen algunos de los métodos POST:
         </p>
 
-        <ul className='texto_d'> 
-            <li>/api/addtopic Agrega un asunto al sistema. El asunto debe seguir un
+        <ul className='lista_d'> 
+            <li> <span> /api/addtopic </span> Agrega un asunto al sistema. El asunto debe seguir un
             formato como el que se aprecia en la figura 15. Si la solicitud es exitosa, el
             método devuelve como respuesta el objeto recibido.</li>
 
             <img src = {ga} alt = "gato" class = "bordes-redondeados"></img>
 
-            <li>/api/addsensor Agrega un sensor al sistema. El sensor debe seguir un
+            <li> <span> /api/addsensor </span> Agrega un sensor al sistema. El sensor debe seguir un
                 formato como el que se aprecia en la figura 16. Si el identificador del asunto especificado en el sensor no pertenece a un asunto en el sistema, 
                 la solicitud falla. Si la solicitud es exitosa, el método devuelve como respuesta
                 el objeto recibido.</li>
             
             <img src = {gsen} alt = "gato" class = "bordes-redondeados"></img>
 
-            <li>/api/addstream Agrega un stream al sistema. El stream debe seguir un
+            <li> <span> /api/addstream </span> Agrega un stream al sistema. El stream debe seguir un
             formato como el que se aprecia en la figura 17. Si la solicitud es exitosa, el método devuelve como respuesta el objeto recibido.</li>
            
             <img src = {gs} alt = "gato" class = "bordes-redondeados"></img>
 
-            <li>/api/addobservation Agrega una observación al sistema. La observación debe seguir un formato como el que se aprecia en la figura 18. 
+            <li> <span> /api/addobservation </span> Agrega una observación al sistema. La observación debe seguir un formato como el que se aprecia en la figura 18. 
               Si la solicitud es exitosa, el método devuelve como respuesta el objeto recibido.</li>
 
             <img src = {go} alt = "gato" class = "bordes-redondeados"></img>
@@ -61,8 +61,8 @@ function DescripcionAPI() {
 
         <p className='texto_d'>A continuación se describen algunos de los métodos GET:</p>
 
-        <ul className='texto_d'>
-          <li>/api/topicSensors/topicId Devuelve todos los sensores que pertenecen a un asunto cuyo identificador es topicId. 
+        <ul className='lista_d'>
+          <li> <span> /api/topicSensors/topicId </span> Devuelve todos los sensores que pertenecen a un asunto cuyo identificador es topicId. 
           Un ejemplo de la solucitud se muestra en la figura 19.</li>
           <img src = {so} alt = "gato" class = "bordes-redondeados"></img>
         </ul>

@@ -5,7 +5,7 @@ function LoginForm() {
 
     return (
         <>
-            <form action="">
+            <form className='LoguinForm'>
                 <p>Nombre de Usuario</p>
                 <input type="text" className="field"></input> <br/>
 

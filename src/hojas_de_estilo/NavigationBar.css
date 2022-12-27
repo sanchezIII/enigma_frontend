@@ -49,6 +49,7 @@ h2{
 
 .link-container:hover{
   background-color: #393E46;
+  cursor: pointer;
 }
 
 .active{

@@ -5,17 +5,17 @@ function IAsunto() {
 
   return (
     <>
-      <form action="">
-                <p>Nombre</p>
+      <form action="" className='formAsunto'>
+                <p className='etiquetasAsunto'>Nombre</p>
                 <input type="text" class="field"></input> <br/>
 
-                <p>Correo electrónico:</p>
+                <p className='etiquetasAsunto'>Correo electrónico:</p>
 	              <input type="text" class="field"></input> <br/>
 
-                <p>Asunto:</p>
+                <p className='etiquetasAsunto'>Asunto:</p>
 	              <input type="text" class="field"></input> <br/>
 
-                <p>Mensaje:</p>
+                <p className='etiquetasAsunto'>Mensaje:</p>
 	              <textarea class="field"></textarea> <br/>
 
                 <p class="center-content">

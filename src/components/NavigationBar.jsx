@@ -29,7 +29,7 @@ function NavigationBar({page, setPage}) {
     return (
         <div className='navigation-bar-container'>
             <div className='encabezado' onClick={manejarClickEncabezado}>
-                <h2>Plataforma ENIGMA</h2>
+                <h2><span>Plataforma</span> ENIGMA</h2>
             </div>
 
             <div className="links-container">

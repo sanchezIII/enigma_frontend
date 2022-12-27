@@ -7,10 +7,10 @@ function LoginForm() {
         <>
             <form className='LoguinForm'>
                 <p>Nombre de Usuario</p>
-                <input type="text" className="field"></input> <br/>
+                <input type="text" className="FieldLogin"></input> <br/>
 
                 <p>Contrasenna:</p>
-                <input type="password" className="field"></input> <br/>
+                <input type="password" className="FieldLogin"></input> <br/>
 
                 <div className="center-content">
                     <input type="submit" className="btn btn-green" value="Enviar Datos"></input>

@@ -2,6 +2,8 @@ import './App.css';
 import LoginForm from "./components/LoginForm";
 import NavigationBar from './components/NavigationBar';
 import './hojas_de_estilo/NavigationBar.css'
+import IAsunto from './components/IAsunto';
+import DescripcionAPI from './components/DescripcionAPI';
 
 import {useState} from "react";
 import UsarPlataforma from "./components/UsarPlataforma";
@@ -43,6 +45,32 @@ function UsarPlataformaPage(setPage){
     );
 }
 
+function IAsuntoPage(setPage){
+    return (
+        <div className="app-container">
+            <NavigationBar
+                page={"asunto"}
+                setPage={setPage}
+            />
+
+            <IAsunto/>
+        </div>
+    );
+}
+
+function DescripcionAPIPage(setPage){
+    return (
+        <div className="app-container">
+            <NavigationBar
+                page={"descripcion"}
+                setPage={setPage}
+            />
+
+            <DescripcionAPI/>
+        </div>
+    );
+}
+
 function App() {
 
     let [page, setPage] = useState("main");
@@ -55,7 +83,13 @@ function App() {
             return LoginPage(setPage);
 
         case "uso":
-            return UsarPlataformaPage(setPage)
+            return UsarPlataformaPage(setPage);
+        
+        case "asunto":
+            return IAsuntoPage(setPage);
+
+        case "descripcion":
+            return DescripcionAPIPage(setPage)
 
         default:
             return <>

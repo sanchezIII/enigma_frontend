@@ -3,11 +3,11 @@ import '../hojas_de_estilo/NavigationBar.css'
 function NavigationBar({page, setPage}) {
 
     function manejarCrearAsunto() {
-
+         setPage('asunto');
     }
 
     function manejarMostrarDescripcion() {
-
+        setPage('descripcion')
     }
 
     function manejarMostrarUso() {

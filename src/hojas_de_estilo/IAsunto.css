@@ -1,55 +1,99 @@
-.formAsunto{
-    background-color: #EEEEEE;
-    border-radius: 3px;
-    color: #393E46;
-    font-size: 0.8em;
-    padding: 20px;
-    margin-top: 13%;
-    width: 70%;
+@font-face {
+  font-family: "SourceSans";
+  src: url("../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
 }
 
+.formAsunto {
+  display: flex;
+  flex-direction: column;
 
+  background-color: #EEEEEE;
+  border-radius: 3px;
+  color: #393E46;
+  font-size: 0.8em;
+  padding: 30px;
+  /*margin-top: 13%;*/
+  width: 60%;
+}
+
+h2.form-header {
+  color: #222831;
+  font-family: "SourceSans", sans-serif;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.horizontal-panel {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.tag-input-pair {
+  width: 90%;
+}
+
+.form-row.description-input-container{
+  width: 90%;
+}
+.description-input {
+  height: 60px;
+  border: solid 1px #ccc;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+select {
+  color: #222831;
+}
+
+.etiquetasAsunto {
+  display: block;
+  width: 92%;
+  margin: 20px 0;
+}
 
 .field {
-
-    border: 0;
-    background-color: #EFF0F1;
-    width: 97%;
-
+  background-color: #EFF0F1;
+  width: 100%;
+  border: solid 1px #ccc;
+  padding: 10px 0;
 }
 
-.field{
-    border: solid 1px #ccc;
-    padding: 10px;
+.field:focus {
+  border-color: #18A383;
 }
 
-.field:focus{
-    border-color: #18A383;
+.center-content {
+  text-align: center;
 }
 
-.center-content{
-    text-align: center;
+.btn {
+  border-radius: 3px;
+  max-width: 10%;
+  display: inline-block;
+  padding: 20px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.btn{
-    border-radius: 3px;
-    max-width: 10%;
-    display: inline-block;
-    padding: 20px 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+.btn-green {
+  color: white;
+  background-color: #00ADB5;
 }
 
-.btn-green{
-    color: white;
-    background-color: #00ADB5;
+.btn-green:hover {
+  background-color: #00ADB5;
 }
-.btn-green:hover{
-    background-color: #00ADB5;	
-}
-.btn-green:active{
-    background-color: #00ADB5;
+
+.btn-green:active {
+  background-color: #00ADB5;
 }

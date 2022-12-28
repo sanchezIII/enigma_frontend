@@ -10,6 +10,9 @@ import {useState} from "react";
 
 import UsarPlataforma from "./components/UsarPlataforma";
 
+// Hacer el request al backend
+const obsTypeList = ["DoubleObservationData", "EnumObservationData", "IntegerObservationData"];
+
 
 function LoginPage(setPage) {
     return (
@@ -56,7 +59,7 @@ function IAsuntoPage(setPage){
                 setPage={setPage}
             />
 
-            <IAsunto/>
+            <IAsunto obsTypes={obsTypeList}/>
         </div>
     );
 }

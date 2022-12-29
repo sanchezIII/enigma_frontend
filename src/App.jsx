@@ -6,12 +6,11 @@ import IAsunto from './components/IAsunto';
 import DescripcionAPI from './components/DescripcionAPI';
 import Principal from './components/Principal';
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import UsarPlataforma from "./components/UsarPlataforma";
 
-// Hacer el request al backend
-const obsTypeList = ["DoubleObservationData", "EnumObservationData", "IntegerObservationData"];
+
 
 
 function LoginPage(setPage) {
@@ -51,7 +50,7 @@ function UsarPlataformaPage(setPage){
     );
 }
 
-function IAsuntoPage(setPage){
+function IAsuntoPage(setPage, obsTypeList){
     return (
         <div className="app-container">
             <NavigationBar
@@ -79,7 +78,24 @@ function DescripcionAPIPage(setPage){
 
 function App() {
 
+    // useEffect(() => {
+    //     fetch("/api")
+    //         // .then((res) => res.json())
+    //         .then((json) => {
+    //             console.log(json);
+    //             return json;
+    //         })
+    //         // .then((data) => setTypes(data.message));
+    // }, []);
+
+    useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            // .then((data) => setData(data.message));
+    }, []);
+
     let [page, setPage] = useState("main");
+    let [types, setTypes] = useState([]);
 
     switch (page) {
         case "main":
@@ -90,7 +106,7 @@ function App() {
 
         case "uso":
             return UsarPlataformaPage(setPage);
-        
+
         case "asunto":
             return IAsuntoPage(setPage);
 
@@ -99,7 +115,7 @@ function App() {
 
         default:
             return <>
-
+                Default!!!
             </>
     }
 }

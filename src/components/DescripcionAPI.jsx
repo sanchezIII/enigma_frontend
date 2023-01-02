@@ -6,12 +6,36 @@ import gsen from '../imagenes/ga.jpg'
 import gs from '../imagenes/gs.jpg'
 import go from '../imagenes/go.jpg'
 import so from '../imagenes/so.jpg'
+import CodeBox from "./CodeBox";
 
 function DescripcionAPI() {
 
+    const code =
+        `const express = require("express");
+const bodyParser = require("body-parser");
+const router = express.Router();
+const app = express();
+
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+router.post('/handle',(request,response) => {
+//code to perform particular action.
+//To access POST variable use req.body()methods.
+console.log(request.body);
+});
+
+// add router in the Express app.
+app.use("/", router);`
+
   return (
     <div className = 'container-description'>
-        
+
+        <CodeBox
+            code={code}
+        />
+
         <h2 className='texto_d'>
            Descripción de la API
         </h2>

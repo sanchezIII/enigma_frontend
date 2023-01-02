@@ -9,9 +9,7 @@ import Principal from './components/Principal';
 import {useEffect, useState} from "react";
 
 import UsarPlataforma from "./components/UsarPlataforma";
-
-
-
+import {prt} from "./util/util";
 
 function LoginPage(setPage) {
     return (
@@ -77,25 +75,16 @@ function DescripcionAPIPage(setPage){
 }
 
 function App() {
-
-    // useEffect(() => {
-    //     fetch("/api")
-    //         // .then((res) => res.json())
-    //         .then((json) => {
-    //             console.log(json);
-    //             return json;
-    //         })
-    //         // .then((data) => setTypes(data.message));
-    // }, []);
+    let [page, setPage] = useState("main");
+    let [types, setTypes] = useState(null);
 
     useEffect(() => {
-        fetch("/api")
-            .then((res) => res.json())
-            // .then((data) => setData(data.message));
+        fetch("/api/observationDataClasses")
+            .then(res => res.json())
+            .then(json => json.message)
+            .then(typeArray => setTypes(typeArray))
+            .catch(fail => {console.log("El fail es: " + fail)})
     }, []);
-
-    let [page, setPage] = useState("main");
-    let [types, setTypes] = useState([]);
 
     switch (page) {
         case "main":
@@ -108,7 +97,7 @@ function App() {
             return UsarPlataformaPage(setPage);
 
         case "asunto":
-            return IAsuntoPage(setPage);
+            return IAsuntoPage(setPage, types);
 
         case "descripcion":
             return DescripcionAPIPage(setPage)

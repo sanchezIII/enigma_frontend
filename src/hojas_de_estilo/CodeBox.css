@@ -1,0 +1,24 @@
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("../fonts/JBMono/JetBrainsMono-Regular.ttf");
+}
+
+.codebox-container{
+  max-width: 70%;
+  width: fit-content;
+  border-radius: 8px;
+  border: solid 1px #aaa;
+}
+
+pre{
+  margin: 0;
+  background-color: #EFF0F1 !important;
+  border-radius: 8px !important;
+}
+
+span{
+  font-weight: 200;
+  font-size: 14px;
+  font-family: "JetBrainsMono", sans-serif;
+}
